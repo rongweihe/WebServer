@@ -50,3 +50,7 @@ cmake . && make
 
 - 添加异步日志系统，记录服务器运行状态
 -
+
+## 参考
+https://github.com/MarvinLe/WebServer
+https://github.com/linyacool/WebServer
