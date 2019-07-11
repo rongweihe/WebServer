@@ -21,8 +21,6 @@
 - 操作系统: Ubuntu 16.04
 - 编译器: g++ 5.4
 - 版本控制: git
-- 自动化构建: cmake
-- 集成开发工具: CLion
 - 编辑器: Vim
 - 压测工具：[WebBench](https://github.com/EZLippi/WebBench)
 
@@ -49,8 +47,9 @@ cmake . && make
 ## 开发计划
 
 - 添加异步日志系统，记录服务器运行状态
--
+- 自动化构建: cmake
+- 集成开发工具: CLion
 
 ## 参考
-https://github.com/MarvinLe/WebServer
-https://github.com/linyacool/WebServer
+- https://github.com/MarvinLe/WebServer
+- https://github.com/linyacool/WebServer
