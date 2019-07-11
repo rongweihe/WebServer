@@ -18,8 +18,8 @@
 
 ## 开发部署环境
 
-- 操作系统: Ubuntu 16.04
-- 编译器: g++ 5.4
+- 操作系统: Ubuntu 5.4.0-6 Ubuntu16.04.9
+- 编译器: g++ version 5.4.0 20160609
 - 版本控制: git
 - 编辑器: Vim
 - 压测工具：[WebBench](https://github.com/EZLippi/WebBench)
