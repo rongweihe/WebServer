@@ -35,14 +35,11 @@ cmake . && make
 ## 核心功能及技术
 
 - 状态机解析 HTTP 请求，目前支持 HTTP GET、HEAD 方法
-- 添加定时器支持 HTTP 长连接，定时回调 handler 处理超时连接
-- 使用 priority queue 实现的最小堆结构管理定时器，使用标记删除，以支持惰性删除，提高性能
-- 使用 epoll + 非阻塞IO + 边缘触发(ET) 实现高并发处理请求，使用Reactor编程模型
+- 使用 priority 队列实现的最小堆结构管理定时器，使用标记删除
+- 使用 epoll + 非阻塞IO + 边缘触发(ET) 实现高并发处理请求，使用 Reactor 编程模型
 - epoll 使用 EPOLLONESHOT 保证一个 socket 连接在任意时刻都只被一个线程处理
-- 使用线程池提高并发度，并降低频繁创建线程的开销
-- 同步互斥的介绍
-- 使用RAII手法封装互斥器 (pthrea_mutex_t)、 条件变量(pthread_cond_t)等线程同步互斥机制，使用RAII管理文件描述符等资源
-- 使用 shared_ptr、weak_ptr 管理指针，防止内存泄漏
+- 使用多线程充分利用多核 CPU，并使用线程池避免线程频繁创建销毁的开销
+- 为减少内存泄漏的可能，使用智能指针等 RAII 机制
 
 ## 开发计划
 
@@ -51,5 +48,4 @@ cmake . && make
 - 集成开发工具: CLion
 
 ## 参考
-- https://github.com/MarvinLe/WebServer
 - https://github.com/linyacool/WebServer
